@@ -1,22 +1,27 @@
-import events.MessageEvent;
-import net.dv8tion.jda.api.JDA;
-import net.dv8tion.jda.api.JDABuilder;
-import net.dv8tion.jda.api.entities.Activity;
+import commands.SlashCommandManager;
+import events.MessageEventCord;
+import org.javacord.api.DiscordApi;
+import org.javacord.api.DiscordApiBuilder;
+import org.javacord.api.entity.activity.ActivityType;
+import org.javacord.api.interaction.SlashCommand;
 
-import javax.security.auth.login.LoginException;
+import java.util.List;
 
 public class Bot {
 
-    public static JDA jda;
+    public static DiscordApi api;
 
-    public static void main(String[] args) throws LoginException {
+    public static void main(String[] args) {
 
-        JDABuilder builder = JDABuilder.createDefault(APIKeys.DISCORD_BOT_TOKEN);
+        api = new DiscordApiBuilder().setToken(APIKeys.DISCORD_BOT_TOKEN)
 
-        builder.setActivity(Activity.playing("Music \uD83C\uDFB6"));
+                .addListener(new MessageEventCord())
 
-        builder.addEventListeners(new MessageEvent());
+                .login().join();
 
-        jda = builder.build();
+        api.updateActivity(ActivityType.PLAYING, "Music \uD83C\uDFB6");
+
+        new SlashCommandManager(api);
     }
+
 }
