@@ -1,4 +1,4 @@
-package audio;
+package me.invacto.audio;
 
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayer;
 import com.sedmelluq.discord.lavaplayer.track.playback.AudioFrame;
@@ -12,10 +12,10 @@ public class LavaplayerAudioSource extends AudioSourceBase {
     private AudioFrame lastFrame;
 
     /**
-     * Creates a new lavaplayer audio source.
+     * Creates a new lavaplayer me.invacto.audio source.
      *
      * @param api A discord api instance.
-     * @param audioPlayer An audio player from Lavaplayer.
+     * @param audioPlayer An me.invacto.audio player from Lavaplayer.
      */
     public LavaplayerAudioSource(DiscordApi api, AudioPlayer audioPlayer) {
         super(api);

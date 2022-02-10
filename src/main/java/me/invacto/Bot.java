@@ -1,11 +1,10 @@
-import commands.SlashCommandManager;
-import events.MessageEventCord;
+package me.invacto;
+
+import me.invacto.commands.SlashCommandManager;
+import me.invacto.events.MessageEventCord;
 import org.javacord.api.DiscordApi;
 import org.javacord.api.DiscordApiBuilder;
 import org.javacord.api.entity.activity.ActivityType;
-import org.javacord.api.interaction.SlashCommand;
-
-import java.util.List;
 
 public class Bot {
 

@@ -1,6 +1,6 @@
-package events;
+package me.invacto.events;
 
-import audio.LavaplayerAudioSource;
+import me.invacto.audio.LavaplayerAudioSource;
 import com.sedmelluq.discord.lavaplayer.player.AudioLoadResultHandler;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayer;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager;
@@ -12,7 +12,6 @@ import com.sedmelluq.discord.lavaplayer.track.AudioTrack;
 import org.javacord.api.DiscordApi;
 import org.javacord.api.audio.AudioSource;
 import org.javacord.api.entity.channel.ServerVoiceChannel;
-import org.javacord.api.entity.message.Message;
 import org.javacord.api.event.message.MessageCreateEvent;
 import org.javacord.api.listener.message.MessageCreateListener;
 

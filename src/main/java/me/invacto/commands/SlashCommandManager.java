@@ -1,4 +1,4 @@
-package commands;
+package me.invacto.commands;
 
 import org.javacord.api.DiscordApi;
 
